@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -89,13 +89,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -134,39 +134,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 <div class="block">Manager responsible for the server ticks.
  <p>
- The <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a> manages the multi-thread aspect for <a href="instance/Instance.html" title="class in net.minestom.server.instance"><code>Instance</code></a> ticks,
- it can be modified with <a href="#setThreadProvider(net.minestom.server.thread.ThreadProvider)"><code>setThreadProvider(ThreadProvider)</code></a>.</div>
+ The <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a> manages the multi-thread aspect of chunk ticks.</div>
 </li>
 </ul>
 </div>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<section role="region">
-<ul class="blockList">
-<li class="blockList"><a id="constructor.summary">
-<!--   -->
-</a>
-<h3>Constructor Summary</h3>
-<table class="memberSummary">
-<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier</th>
-<th class="colSecond" scope="col">Constructor</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">UpdateManager</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Should only be created in MinecraftServer.</div>
-</td>
-</tr>
-</table>
-</li>
-</ul>
-</section>
 <!-- ========== METHOD SUMMARY =========== -->
 <section role="region">
 <ul class="blockList">
@@ -201,7 +175,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread">ThreadProvider</a></code></td>
+<td class="colFirst"><code>@NotNull <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread">ThreadProvider</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getThreadProvider()">getThreadProvider</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Gets the current <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a>.</div>
@@ -228,49 +202,33 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setThreadProvider(net.minestom.server.thread.ThreadProvider)">setThreadProvider</a></span>&#8203;(<a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread">ThreadProvider</a>&nbsp;threadProvider)</code></th>
-<td class="colLast">
-<div class="block">Changes the server <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a>.</div>
-</td>
-</tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#signalChunkLoad(net.minestom.server.instance.Instance,net.minestom.server.instance.Chunk)">signalChunkLoad</a></span>&#8203;(<a href="instance/Instance.html" title="class in net.minestom.server.instance">Instance</a>&nbsp;instance,
-               @NotNull <a href="instance/Chunk.html" title="class in net.minestom.server.instance">Chunk</a>&nbsp;chunk)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#signalChunkLoad(net.minestom.server.instance.Chunk)">signalChunkLoad</a></span>&#8203;(@NotNull <a href="instance/Chunk.html" title="class in net.minestom.server.instance">Chunk</a>&nbsp;chunk)</code></th>
 <td class="colLast">
 <div class="block">Signals the <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a> that a chunk has been loaded.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#signalChunkUnload(net.minestom.server.instance.Instance,net.minestom.server.instance.Chunk)">signalChunkUnload</a></span>&#8203;(<a href="instance/Instance.html" title="class in net.minestom.server.instance">Instance</a>&nbsp;instance,
-                 @NotNull <a href="instance/Chunk.html" title="class in net.minestom.server.instance">Chunk</a>&nbsp;chunk)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#signalChunkUnload(net.minestom.server.instance.Chunk)">signalChunkUnload</a></span>&#8203;(@NotNull <a href="instance/Chunk.html" title="class in net.minestom.server.instance">Chunk</a>&nbsp;chunk)</code></th>
 <td class="colLast">
 <div class="block">Signals the <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a> that a chunk has been unloaded.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#signalInstanceCreate(net.minestom.server.instance.Instance)">signalInstanceCreate</a></span>&#8203;(<a href="instance/Instance.html" title="class in net.minestom.server.instance">Instance</a>&nbsp;instance)</code></th>
 <td class="colLast">
 <div class="block">Signals the <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a> that an instance has been created.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#signalInstanceDelete(net.minestom.server.instance.Instance)">signalInstanceDelete</a></span>&#8203;(<a href="instance/Instance.html" title="class in net.minestom.server.instance">Instance</a>&nbsp;instance)</code></th>
 <td class="colLast">
 <div class="block">Signals the <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a> that an instance has been deleted.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#start()">start</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Starts the server loop in the update thread.</div>
-</td>
-</tr>
-<tr id="i13" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stop()">stop</a></span>()</code></th>
 <td class="colLast">
@@ -294,26 +252,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
-<section role="region">
-<ul class="blockList">
-<li class="blockList"><a id="constructor.detail">
-<!--   -->
-</a>
-<h3>Constructor Detail</h3>
-<a id="&lt;init&gt;()">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>UpdateManager</h4>
-<pre>protected&nbsp;UpdateManager()</pre>
-<div class="block">Should only be created in MinecraftServer.</div>
-</li>
-</ul>
-</li>
-</ul>
-</section>
 <!-- ============ METHOD DETAIL ========== -->
 <section role="region">
 <ul class="blockList">
@@ -321,43 +259,18 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="start()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>start</h4>
-<pre class="methodSignature">protected&nbsp;void&nbsp;start()</pre>
-<div class="block">Starts the server loop in the update thread.</div>
-</li>
-</ul>
 <a id="getThreadProvider()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getThreadProvider</h4>
-<pre class="methodSignature">public&nbsp;<a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread">ThreadProvider</a>&nbsp;getThreadProvider()</pre>
+<pre class="methodSignature">@NotNull
+public&nbsp;@NotNull <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread">ThreadProvider</a>&nbsp;getThreadProvider()</pre>
 <div class="block">Gets the current <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current thread provider</dd>
-</dl>
-</li>
-</ul>
-<a id="setThreadProvider(net.minestom.server.thread.ThreadProvider)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setThreadProvider</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setThreadProvider&#8203;(<a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread">ThreadProvider</a>&nbsp;threadProvider)</pre>
-<div class="block">Changes the server <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a>.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>threadProvider</code> - the new thread provider</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>threadProvider</code> is null</dd>
 </dl>
 </li>
 </ul>
@@ -393,40 +306,36 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </dl>
 </li>
 </ul>
-<a id="signalChunkLoad(net.minestom.server.instance.Instance,net.minestom.server.instance.Chunk)">
+<a id="signalChunkLoad(net.minestom.server.instance.Chunk)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>signalChunkLoad</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;signalChunkLoad&#8203;(<a href="instance/Instance.html" title="class in net.minestom.server.instance">Instance</a>&nbsp;instance,
-                            @NotNull
+<pre class="methodSignature">public&nbsp;void&nbsp;signalChunkLoad&#8203;(@NotNull
                             @NotNull <a href="instance/Chunk.html" title="class in net.minestom.server.instance">Chunk</a>&nbsp;chunk)</pre>
 <div class="block">Signals the <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a> that a chunk has been loaded.
  <p>
  WARNING: should be automatically done by the <a href="instance/Instance.html" title="class in net.minestom.server.instance"><code>Instance</code></a> implementation.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>instance</code> - the instance of the chunk</dd>
 <dd><code>chunk</code> - the loaded chunk</dd>
 </dl>
 </li>
 </ul>
-<a id="signalChunkUnload(net.minestom.server.instance.Instance,net.minestom.server.instance.Chunk)">
+<a id="signalChunkUnload(net.minestom.server.instance.Chunk)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>signalChunkUnload</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;signalChunkUnload&#8203;(<a href="instance/Instance.html" title="class in net.minestom.server.instance">Instance</a>&nbsp;instance,
-                              @NotNull
+<pre class="methodSignature">public&nbsp;void&nbsp;signalChunkUnload&#8203;(@NotNull
                               @NotNull <a href="instance/Chunk.html" title="class in net.minestom.server.instance">Chunk</a>&nbsp;chunk)</pre>
 <div class="block">Signals the <a href="thread/ThreadProvider.html" title="class in net.minestom.server.thread"><code>ThreadProvider</code></a> that a chunk has been unloaded.
  <p>
  WARNING: should be automatically done by the <a href="instance/Instance.html" title="class in net.minestom.server.instance"><code>Instance</code></a> implementation.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>instance</code> - the instance of the chunk</dd>
 <dd><code>chunk</code> - the unloaded chunk</dd>
 </dl>
 </li>
@@ -578,13 +487,13 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

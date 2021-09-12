@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -144,29 +144,6 @@ implements <a href="../ComponentHoldingServerPacket.html" title="interface in ne
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- ======== NESTED CLASS SUMMARY ======== -->
-<section role="region">
-<ul class="blockList">
-<li class="blockList"><a id="nested.class.summary">
-<!--   -->
-</a>
-<h3>Nested Class Summary</h3>
-<table class="memberSummary">
-<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colSecond" scope="col">Class</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="ChatMessagePacket.Position.html" title="enum in net.minestom.server.network.packet.server.play">ChatMessagePacket.Position</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-</table>
-</li>
-</ul>
-</section>
 <!-- =========== FIELD SUMMARY =========== -->
 <section role="region">
 <ul class="blockList">
@@ -182,12 +159,12 @@ implements <a href="../ComponentHoldingServerPacket.html" title="interface in ne
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://jd.adventure.kyori.net/api/4.7.0/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a></code></td>
+<td class="colFirst"><code><a href="https://jd.adventure.kyori.net/api/4.8.1/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#message">message</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="ChatMessagePacket.Position.html" title="enum in net.minestom.server.network.packet.server.play">ChatMessagePacket.Position</a></code></td>
+<td class="colFirst"><code><a href="../../../../message/ChatPosition.html" title="enum in net.minestom.server.message">ChatPosition</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#position">position</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -218,14 +195,9 @@ implements <a href="../ComponentHoldingServerPacket.html" title="interface in ne
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.kyori.adventure.text.Component,net.minestom.server.network.packet.server.play.ChatMessagePacket.Position)">ChatMessagePacket</a></span>&#8203;(<a href="https://jd.adventure.kyori.net/api/4.7.0/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&nbsp;message,
-                 <a href="ChatMessagePacket.Position.html" title="enum in net.minestom.server.network.packet.server.play">ChatMessagePacket.Position</a>&nbsp;position)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.kyori.adventure.text.Component,net.minestom.server.network.packet.server.play.ChatMessagePacket.Position,java.util.UUID)">ChatMessagePacket</a></span>&#8203;(<a href="https://jd.adventure.kyori.net/api/4.7.0/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&nbsp;message,
-                 <a href="ChatMessagePacket.Position.html" title="enum in net.minestom.server.network.packet.server.play">ChatMessagePacket.Position</a>&nbsp;position,
-                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uuid)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(net.kyori.adventure.text.Component,net.minestom.server.message.ChatPosition,java.util.UUID)">ChatMessagePacket</a></span>&#8203;(@NotNull <a href="https://jd.adventure.kyori.net/api/4.8.1/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&nbsp;message,
+                 @NotNull <a href="../../../../message/ChatPosition.html" title="enum in net.minestom.server.message">ChatPosition</a>&nbsp;position,
+                 @Nullable <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uuid)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -247,7 +219,7 @@ implements <a href="../ComponentHoldingServerPacket.html" title="interface in ne
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="https://jd.adventure.kyori.net/api/4.7.0/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&gt;</code></td>
+<td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="https://jd.adventure.kyori.net/api/4.8.1/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#components()">components</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Gets the components held by this object.</div>
@@ -255,7 +227,7 @@ implements <a href="../ComponentHoldingServerPacket.html" title="interface in ne
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="../ServerPacket.html" title="interface in net.minestom.server.network.packet.server">ServerPacket</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#copyWithOperator(java.util.function.UnaryOperator)">copyWithOperator</a></span>&#8203;(@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/UnaryOperator.html?is-external=true" title="class or interface in java.util.function" class="externalLink">UnaryOperator</a>&lt;<a href="https://jd.adventure.kyori.net/api/4.7.0/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&gt;&nbsp;operator)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#copyWithOperator(java.util.function.UnaryOperator)">copyWithOperator</a></span>&#8203;(@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/UnaryOperator.html?is-external=true" title="class or interface in java.util.function" class="externalLink">UnaryOperator</a>&lt;<a href="https://jd.adventure.kyori.net/api/4.8.1/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&gt;&nbsp;operator)</code></th>
 <td class="colLast">
 <div class="block">Returns a copy of this object.</div>
 </td>
@@ -318,7 +290,7 @@ implements <a href="../ComponentHoldingServerPacket.html" title="interface in ne
 <ul class="blockList">
 <li class="blockList">
 <h4>message</h4>
-<pre>public&nbsp;<a href="https://jd.adventure.kyori.net/api/4.7.0/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a> message</pre>
+<pre>public&nbsp;<a href="https://jd.adventure.kyori.net/api/4.8.1/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a> message</pre>
 </li>
 </ul>
 <a id="position">
@@ -327,7 +299,7 @@ implements <a href="../ComponentHoldingServerPacket.html" title="interface in ne
 <ul class="blockList">
 <li class="blockList">
 <h4>position</h4>
-<pre>public&nbsp;<a href="ChatMessagePacket.Position.html" title="enum in net.minestom.server.network.packet.server.play">ChatMessagePacket.Position</a> position</pre>
+<pre>public&nbsp;<a href="../../../../message/ChatPosition.html" title="enum in net.minestom.server.message">ChatPosition</a> position</pre>
 </li>
 </ul>
 <a id="uuid">
@@ -349,34 +321,27 @@ implements <a href="../ComponentHoldingServerPacket.html" title="interface in ne
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
+<a id="&lt;init&gt;(net.kyori.adventure.text.Component,net.minestom.server.message.ChatPosition,java.util.UUID)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ChatMessagePacket</h4>
+<pre>public&nbsp;ChatMessagePacket&#8203;(@NotNull
+                         @NotNull <a href="https://jd.adventure.kyori.net/api/4.8.1/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&nbsp;message,
+                         @NotNull
+                         @NotNull <a href="../../../../message/ChatPosition.html" title="enum in net.minestom.server.message">ChatPosition</a>&nbsp;position,
+                         @Nullable
+                         @Nullable <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uuid)</pre>
+</li>
+</ul>
 <a id="&lt;init&gt;()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>ChatMessagePacket</h4>
-<pre>public&nbsp;ChatMessagePacket()</pre>
-</li>
-</ul>
-<a id="&lt;init&gt;(net.kyori.adventure.text.Component,net.minestom.server.network.packet.server.play.ChatMessagePacket.Position,java.util.UUID)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>ChatMessagePacket</h4>
-<pre>public&nbsp;ChatMessagePacket&#8203;(<a href="https://jd.adventure.kyori.net/api/4.7.0/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&nbsp;message,
-                         <a href="ChatMessagePacket.Position.html" title="enum in net.minestom.server.network.packet.server.play">ChatMessagePacket.Position</a>&nbsp;position,
-                         <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/UUID.html?is-external=true" title="class or interface in java.util" class="externalLink">UUID</a>&nbsp;uuid)</pre>
-</li>
-</ul>
-<a id="&lt;init&gt;(net.kyori.adventure.text.Component,net.minestom.server.network.packet.server.play.ChatMessagePacket.Position)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ChatMessagePacket</h4>
-<pre>public&nbsp;ChatMessagePacket&#8203;(<a href="https://jd.adventure.kyori.net/api/4.7.0/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&nbsp;message,
-                         <a href="ChatMessagePacket.Position.html" title="enum in net.minestom.server.network.packet.server.play">ChatMessagePacket.Position</a>&nbsp;position)</pre>
+<pre>public&nbsp;ChatMessagePacket()</pre>
 </li>
 </ul>
 </li>
@@ -453,7 +418,7 @@ implements <a href="../ComponentHoldingServerPacket.html" title="interface in ne
 <li class="blockList">
 <h4>components</h4>
 <pre class="methodSignature">@NotNull
-public&nbsp;@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="https://jd.adventure.kyori.net/api/4.7.0/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&gt;&nbsp;components()</pre>
+public&nbsp;@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;<a href="https://jd.adventure.kyori.net/api/4.8.1/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&gt;&nbsp;components()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../adventure/ComponentHolder.html#components()">ComponentHolder</a></code></span></div>
 <div class="block">Gets the components held by this object.</div>
 <dl>
@@ -472,7 +437,7 @@ public&nbsp;@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api
 <h4>copyWithOperator</h4>
 <pre class="methodSignature">@NotNull
 public&nbsp;@NotNull <a href="../ServerPacket.html" title="interface in net.minestom.server.network.packet.server">ServerPacket</a>&nbsp;copyWithOperator&#8203;(@NotNull
-                                              @NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/UnaryOperator.html?is-external=true" title="class or interface in java.util.function" class="externalLink">UnaryOperator</a>&lt;<a href="https://jd.adventure.kyori.net/api/4.7.0/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&gt;&nbsp;operator)</pre>
+                                              @NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/UnaryOperator.html?is-external=true" title="class or interface in java.util.function" class="externalLink">UnaryOperator</a>&lt;<a href="https://jd.adventure.kyori.net/api/4.8.1/net/kyori/adventure/text/Component.html?is-external=true" title="class or interface in net.kyori.adventure.text" class="externalLink">Component</a>&gt;&nbsp;operator)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../adventure/ComponentHolder.html#copyWithOperator(java.util.function.UnaryOperator)">ComponentHolder</a></code></span></div>
 <div class="block">Returns a copy of this object. For each component this object holds, the operator
  is applied to the copy before returning.</div>
@@ -537,7 +502,7 @@ public&nbsp;@NotNull <a href="../ServerPacket.html" title="interface in net.mine
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
