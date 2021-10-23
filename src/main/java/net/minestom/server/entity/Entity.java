@@ -77,6 +77,7 @@ public class Entity implements Viewable, Tickable, TagHandler, PermissionHandler
     protected Chunk currentChunk;
     protected Pos position;
     protected Pos previousPosition;
+    protected Pos lastTickPosition;
     protected Pos lastSyncedPosition;
     protected boolean onGround;
 
@@ -178,6 +179,7 @@ public class Entity implements Viewable, Tickable, TagHandler, PermissionHandler
         this.uuid = uuid;
         this.position = Pos.ZERO;
         this.previousPosition = Pos.ZERO;
+        this.lastTickPosition = Pos.ZERO;
         this.lastSyncedPosition = Pos.ZERO;
 
         setBoundingBox(entityType.width(), entityType.height(), entityType.width());
@@ -285,6 +287,7 @@ public class Entity implements Viewable, Tickable, TagHandler, PermissionHandler
         final Runnable endCallback = () -> {
             this.previousPosition = this.position;
             this.position = position;
+            this.lastTickPosition = position;
             refreshCoordinate(position);
             synchronizePosition(true);
         };
@@ -529,7 +532,18 @@ public class Entity implements Viewable, Tickable, TagHandler, PermissionHandler
 
     private void velocityTick() {
         this.gravityTickCount = onGround ? 0 : gravityTickCount + 1;
-        if (PlayerUtils.isSocketClient(this)) return;
+
+        if (PlayerUtils.isSocketClient(this)) {
+            if (position.samePoint(lastTickPosition)) {
+                // Didn't move since last tick
+                velocity = Vec.ZERO;
+                return;
+            }
+            // Calculate from client
+            velocity = position.sub(lastTickPosition).asVec().mul(MinecraftServer.TICK_PER_SECOND);
+            lastTickPosition = position;
+            return;
+        }
         if (vehicle != null) return;
 
         final boolean noGravity = hasNoGravity();
@@ -803,6 +817,7 @@ public class Entity implements Viewable, Tickable, TagHandler, PermissionHandler
         }
         this.position = spawnPosition;
         this.previousPosition = spawnPosition;
+        this.lastTickPosition = spawnPosition;
         this.instance = instance;
         return instance.loadOptionalChunk(spawnPosition).thenAccept(chunk -> {
             Check.notNull(chunk, "Entity has been placed in an unloaded chunk!");
@@ -1225,11 +1240,6 @@ public class Entity implements Viewable, Tickable, TagHandler, PermissionHandler
         this.previousPosition = previousPosition;
         if (!position.samePoint(previousPosition)) {
             refreshCoordinate(position);
-            // Update player velocity
-            if (PlayerUtils.isSocketClient(this)) {
-                // Calculate from client
-                this.velocity = position.sub(previousPosition).asVec().mul(MinecraftServer.TICK_PER_SECOND);
-            }
         }
         // Update viewers
         final boolean viewChange = !position.sameView(lastSyncedPosition);
