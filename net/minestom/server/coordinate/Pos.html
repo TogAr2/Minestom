@@ -342,7 +342,7 @@ implements <a href="Point.html" title="interface in net.minestom.server.coordina
 <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minestom.server.coordinate.Point">Methods inherited from interface&nbsp;net.minestom.server.coordinate.<a href="Point.html" title="interface in net.minestom.server.coordinate">Point</a></h3>
-<code><a href="Point.html#blockX()">blockX</a>, <a href="Point.html#blockY()">blockY</a>, <a href="Point.html#blockZ()">blockZ</a>, <a href="Point.html#chunkX()">chunkX</a>, <a href="Point.html#chunkZ()">chunkZ</a>, <a href="Point.html#distance(net.minestom.server.coordinate.Point)">distance</a>, <a href="Point.html#distanceSquared(net.minestom.server.coordinate.Point)">distanceSquared</a>, <a href="Point.html#isZero()">isZero</a>, <a href="Point.html#sameBlock(net.minestom.server.coordinate.Point)">sameBlock</a>, <a href="Point.html#sameChunk(net.minestom.server.coordinate.Point)">sameChunk</a>, <a href="Point.html#samePoint(net.minestom.server.coordinate.Point)">samePoint</a></code></div>
+<code><a href="Point.html#blockX()">blockX</a>, <a href="Point.html#blockY()">blockY</a>, <a href="Point.html#blockZ()">blockZ</a>, <a href="Point.html#chunkX()">chunkX</a>, <a href="Point.html#chunkZ()">chunkZ</a>, <a href="Point.html#distance(double,double,double)">distance</a>, <a href="Point.html#distance(net.minestom.server.coordinate.Point)">distance</a>, <a href="Point.html#distanceSquared(double,double,double)">distanceSquared</a>, <a href="Point.html#distanceSquared(net.minestom.server.coordinate.Point)">distanceSquared</a>, <a href="Point.html#isZero()">isZero</a>, <a href="Point.html#sameBlock(int,int,int)">sameBlock</a>, <a href="Point.html#sameBlock(net.minestom.server.coordinate.Point)">sameBlock</a>, <a href="Point.html#sameChunk(net.minestom.server.coordinate.Point)">sameChunk</a>, <a href="Point.html#samePoint(double,double,double)">samePoint</a>, <a href="Point.html#samePoint(net.minestom.server.coordinate.Point)">samePoint</a></code></div>
 </section>
 </li>
 </ul>
@@ -541,48 +541,6 @@ implements <a href="Point.html" title="interface in net.minestom.server.coordina
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a vector pointing the direction of this location's <a href="#pitch()"><code>pitch</code></a> and <a href="#yaw()"><code>yaw</code></a></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="x()">
-<h3>x</h3>
-<div class="member-signature"><span class="annotations">@Contract(pure=true)
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">x</span>()</div>
-<div class="block">Returns the value of the <code>x</code> record component.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Point.html#x()">x</a></code>&nbsp;in interface&nbsp;<code><a href="Point.html" title="interface in net.minestom.server.coordinate">Point</a></code></dd>
-<dt>Returns:</dt>
-<dd>the value of the <code>x</code> record component</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="y()">
-<h3>y</h3>
-<div class="member-signature"><span class="annotations">@Contract(pure=true)
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">y</span>()</div>
-<div class="block">Returns the value of the <code>y</code> record component.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Point.html#y()">y</a></code>&nbsp;in interface&nbsp;<code><a href="Point.html" title="interface in net.minestom.server.coordinate">Point</a></code></dd>
-<dt>Returns:</dt>
-<dd>the value of the <code>y</code> record component</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="z()">
-<h3>z</h3>
-<div class="member-signature"><span class="annotations">@Contract(pure=true)
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">z</span>()</div>
-<div class="block">Returns the value of the <code>z</code> record component.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Point.html#z()">z</a></code>&nbsp;in interface&nbsp;<code><a href="Point.html" title="interface in net.minestom.server.coordinate">Point</a></code></dd>
-<dt>Returns:</dt>
-<dd>the value of the <code>z</code> record component</dd>
 </dl>
 </section>
 </li>
@@ -870,30 +828,6 @@ implements <a href="Point.html" title="interface in net.minestom.server.coordina
 </section>
 </li>
 <li>
-<section class="detail" id="yaw()">
-<h3>yaw</h3>
-<div class="member-signature"><span class="annotations">@Contract(pure=true)
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">yaw</span>()</div>
-<div class="block">Returns the value of the <code>yaw</code> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <code>yaw</code> record component</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="pitch()">
-<h3>pitch</h3>
-<div class="member-signature"><span class="annotations">@Contract(pure=true)
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">pitch</span>()</div>
-<div class="block">Returns the value of the <code>pitch</code> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <code>pitch</code> record component</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="asVec()">
 <h3>asVec</h3>
 <div class="member-signature"><span class="annotations">@Contract(pure=true)
@@ -939,6 +873,67 @@ implements <a href="Point.html" title="interface in net.minestom.server.coordina
 <dd><code>o</code> - the object with which to compare</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if this object is the same as the <code>o</code> argument; <code>false</code> otherwise.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="x()">
+<h3>x</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">x</span>()</div>
+<div class="block">Returns the value of the <code>x</code> record component.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Point.html#x()">x</a></code>&nbsp;in interface&nbsp;<code><a href="Point.html" title="interface in net.minestom.server.coordinate">Point</a></code></dd>
+<dt>Returns:</dt>
+<dd>the value of the <code>x</code> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="y()">
+<h3>y</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">y</span>()</div>
+<div class="block">Returns the value of the <code>y</code> record component.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Point.html#y()">y</a></code>&nbsp;in interface&nbsp;<code><a href="Point.html" title="interface in net.minestom.server.coordinate">Point</a></code></dd>
+<dt>Returns:</dt>
+<dd>the value of the <code>y</code> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="z()">
+<h3>z</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">z</span>()</div>
+<div class="block">Returns the value of the <code>z</code> record component.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Point.html#z()">z</a></code>&nbsp;in interface&nbsp;<code><a href="Point.html" title="interface in net.minestom.server.coordinate">Point</a></code></dd>
+<dt>Returns:</dt>
+<dd>the value of the <code>z</code> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="yaw()">
+<h3>yaw</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">yaw</span>()</div>
+<div class="block">Returns the value of the <code>yaw</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>yaw</code> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="pitch()">
+<h3>pitch</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">pitch</span>()</div>
+<div class="block">Returns the value of the <code>pitch</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>pitch</code> record component</dd>
 </dl>
 </section>
 </li>

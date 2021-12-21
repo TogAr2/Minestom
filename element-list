@@ -97,7 +97,6 @@ net.minestom.server.map.framebuffers
 net.minestom.server.message
 net.minestom.server.monitoring
 net.minestom.server.network
-net.minestom.server.network.packet
 net.minestom.server.network.packet.client
 net.minestom.server.network.packet.client.handler
 net.minestom.server.network.packet.client.handshake
@@ -138,6 +137,7 @@ net.minestom.server.utils.chunk
 net.minestom.server.utils.clone
 net.minestom.server.utils.debug
 net.minestom.server.utils.entity
+net.minestom.server.utils.function
 net.minestom.server.utils.identity
 net.minestom.server.utils.instance
 net.minestom.server.utils.inventory
